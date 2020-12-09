@@ -20,6 +20,6 @@ jobs:
     -name: Install Surge
      run: npm install -g surge
      -name: Run Surge
-      run: surge ./ myBootCampMMA.surge.sh --token ${{secret.MYSURGETOKEN}}
+      run: surge ./ myBootCampMMA.surge.sh --token ${{secrets.MYSURGETOKEN}}
       
 
