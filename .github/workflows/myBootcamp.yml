@@ -1,11 +1,9 @@
 name: Jekyll site CI
-
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
 jobs:
   build:
 
@@ -17,9 +15,9 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
-    -name: Install Surge
-     run: npm install -g surge
-     -name: Run Surge
-      run: surge ./ myBootCampMMA.surge.sh --token ${{secrets.MYSURGETOKEN}}
+    - name: Install Surge
+      run : npm install -g surge
+    - name : Run Surge
+      run : surge ./ myBootCampMMA.surge.sh --token ${{secrets.MYSURGETOKEN}}
       
 
